@@ -43,7 +43,7 @@ const show = d3slideshow.create('#results', title)
 // const end = 3651;
 
 
-d3.json("data/Pathways3.json", function(error, pathwaysAll) {
+d3.json("https://patientpathwayanalysis.github.io/IPPA-data/output/Pathways.json", function(error, pathwaysAll) {
     const colors = d3.scaleOrdinal(d3.schemeCategory20c).domain(stageMaps.map(e=>e.Stage));
     const subSize = 100;
     // let fil = function(x) {return True};
@@ -587,7 +587,7 @@ console.log(pathwaysAll);
         .text('Chapter', 'Results')
         .text('Section', 'Fetched Pathways')
         .text('Context', `
-6496 patient pathways are captured from 2001 to 2010. 
+6496 patient pathways are captured from 2001 to 2010.
 (Simulated 100 pathways ->)
 `)
         .event("activate", function(figs) {
@@ -702,7 +702,7 @@ Distribution of stages patients stayed.
 
 Interrupted Evalution caused a long flat tail
 - Old patients
-- With chronic lung diseases 
+- With chronic lung diseases
 - Subsidised low income households
 - Without Diabetes (negative)
 
@@ -756,7 +756,7 @@ Gini:
 |-------------------|-------|---------|
 | Income < 50%:     | 74%   | 86%     |
 | Unempolyed:       | 56%   | 80%     |
-            
+
         `)
         .event("activate", function(figs) {
             fig = d3slideshow.highlight(figs, "Lrz");
@@ -814,7 +814,7 @@ Patient:
 Physician:
 - Treatment strategy
 
-Policy maker: 
+Policy maker:
 - Controllable infectious period
         `)
         .event('activate', function(figs) {
