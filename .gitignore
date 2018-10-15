@@ -1,3 +1,4 @@
 ./idea/*
-
+data/*
 javascripts/d3slideshow.js
+javascripts/ippa-vis.js

@@ -2,23 +2,35 @@
 <html>
 
 <head>
-    <title>Results</title>
+    <title>Individual Patient Pathway Analysis: IPPA</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://timewz667.github.io/d3slideshow/d3slideshow.css">
-
+    <!--<link rel="stylesheet" type="text/css" href="stylesheets/d3slideshow.css">-->
     <style>
-        table, td, th {
-            border: 1px solid #ddd;
+        div #page-footer {
+            position: fixed;
+            padding: 20px;
+            width: 25%;
+            border: 10px blue;
+            z-index: 999;
+            bottom: 0;
+        }
+
+        div #overview {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        div.tooltip {
+            position: absolute;
             text-align: left;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td {
-            padding: 15px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0;
+            z-index: 5;
+            border-radius: 2px;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -26,15 +38,16 @@
 
 <body>
 
-<div class="container" id="results"></div>
+<div class="container" id="overview"></div>
 
 </body>
-
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.17/marked.min.js"></script>
 <script src="https://timewz667.github.io/d3slideshow/d3slideshow.js"></script>
-<script src="javascripts/results.js"></script>
+<!--<script src="javascripts/d3slideshow.js"></script>-->
+<script src="javascripts/ippa-vis.js"></script>
+<script src="javascripts/vis.js"></script>
 
 </html>
