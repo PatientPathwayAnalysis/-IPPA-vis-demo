@@ -52,6 +52,15 @@ function cutBlocks(blocks, stages, end) {
     return sds;
 }
 
+show.appendFigure("Availability")
+    .event("init", function () {
+        this.g.append("image")
+            .attr("xlink:href", "figures/ppa.png")
+            .attr("height", this.height)
+            .attr("width", this.width);
+        });
+
+
 
 d3.queue()
     // .defer(d3.json, "data/output/Pathways.json")
@@ -403,18 +412,18 @@ Different colours imply  different stages in patient pathways.
                 fig.start();
             });
 
-        show.appendSlide()
-            .text('Chapter', 'Overview')
-            .text('Section', 'About availability')
-            .text('Context', `
-            
-The figure is adapted from the [Patient Pathway Analysis]('https://academic.oup.com/jid/article/216/suppl_7/S679/4595554').
-It visualises the alignment of healthcare services and patient care-seeking.
-`)
-            .event("activate", function(figs) {
-            d3slideshow.hideAll(figs);
-
-        });
+//         show.appendSlide()
+//             .text('Chapter', 'Overview')
+//             .text('Section', 'About availability')
+//             .text('Context', `
+//
+// The figure is adapted from the [Patient Pathway Analysis]('https://academic.oup.com/jid/article/216/suppl_7/S679/4595554').
+// It visualises the alignment of healthcare services and patient care-seeking.
+// `)
+//             .event("activate", function(figs) {
+//                 d3slideshow.highlight(figs, "Ava", 500);
+//
+//         });
 
         show.appendSlide()
             .text('Chapter', 'Overview')
