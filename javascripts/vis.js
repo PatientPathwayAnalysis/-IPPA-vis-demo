@@ -69,6 +69,7 @@ d3.queue()
     .defer(d3.json, "https://patientpathwayanalysis.github.io/IPPA-data/Input/Stages_TB.json")
     .await(function(error, pathways, stage_maps) {
         console.log(stage_maps);
+        pathways = pathways.Episodes;
         console.log(pathways);
         // transform data
         const n_pathways = pathways.length;
